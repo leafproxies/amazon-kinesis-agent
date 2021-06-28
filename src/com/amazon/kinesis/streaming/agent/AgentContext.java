@@ -97,7 +97,7 @@ public class AgentContext extends AgentConfiguration implements IMetricsContext 
                 try {
                     // instanceTag = InetAddress.getLocalHost().getHostName();
                     // instanceTag = System.getenv("HOST_ID");
-                    instanceTag = "abcdefg-test";
+                    instanceTag = null;
                 } catch (UnknownHostException e) {
                     LOGGER.error("Cannot determine host name, instance tagging in CloudWatch metrics will be skipped.");
                 }
