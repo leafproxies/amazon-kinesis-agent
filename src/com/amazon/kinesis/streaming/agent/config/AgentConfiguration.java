@@ -191,4 +191,8 @@ public class AgentConfiguration extends Configuration {
     public String stsEndpoint() {
     	return this.readString("sts." + ENDPOINT_KEY, null);
     }
+    
+    public String hostname() {
+    	return this.readString("hostname", null);
+    }
 }
