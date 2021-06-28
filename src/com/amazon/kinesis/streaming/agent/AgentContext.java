@@ -91,8 +91,9 @@ public class AgentContext extends AgentConfiguration implements IMetricsContext 
     public AgentContext(Configuration configuration, FileFlowFactory fileFlowFactory) {
         super(configuration);
         this.fileFlowFactory = fileFlowFactory;
-        if (cloudwatchTagInstance()) {
-            instanceTag = System.getenv("HOST_ID");
+        instanceTag = "CC-divine-urchin";
+//        if (cloudwatchTagInstance()) {
+//            instanceTag = System.getenv("HOST_ID");
 //            instanceTag = EC2MetadataUtils.getInstanceId();
 //            if (Strings.isNullOrEmpty(instanceTag)) {
 //                 try {
@@ -103,7 +104,7 @@ public class AgentContext extends AgentConfiguration implements IMetricsContext 
 //                     LOGGER.error("Cannot determine host name, instance tagging in CloudWatch metrics will be skipped.");
 //                 }
 //            }
-        }
+//        }
         if (containsKey("flows")) {
             for (Configuration c : readList("flows", Configuration.class)) {
                 FileFlow<?> flow = fileFlowFactory.getFileFlow(this, c);
