@@ -95,7 +95,6 @@ public class AgentContext extends AgentConfiguration implements IMetricsContext 
            instanceTag = EC2MetadataUtils.getInstanceId();
            if (Strings.isNullOrEmpty(instanceTag)) {
                 instanceTag = this.hostname();
-                LOGGER.error(instanceTag);
 //                 try {
 //                     instanceTag = InetAddress.getLocalHost().getHostName();
 //                     LOGGER.error(instanceTag);
