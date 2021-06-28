@@ -102,7 +102,7 @@ public class AgentContext extends AgentConfiguration implements IMetricsContext 
 //                 } catch (UnknownHostException e) {
 //                     LOGGER.error("Cannot determine host name, instance tagging in CloudWatch metrics will be skipped.");
 //                 }
-            }
+//            }
         }
         if (containsKey("flows")) {
             for (Configuration c : readList("flows", Configuration.class)) {
