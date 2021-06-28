@@ -92,9 +92,9 @@ public class AgentContext extends AgentConfiguration implements IMetricsContext 
         super(configuration);
         this.fileFlowFactory = fileFlowFactory;
         if (cloudwatchTagInstance()) {
-            instanceTag = EC2MetadataUtils.getInstanceId();
-            if (Strings.isNullOrEmpty(instanceTag)) {
-                instanceTag = System.getenv("HOST_ID");
+            instanceTag = System.getenv("HOST_ID");
+//            instanceTag = EC2MetadataUtils.getInstanceId();
+//            if (Strings.isNullOrEmpty(instanceTag)) {
 //                 try {
 //                     // instanceTag = InetAddress.getLocalHost().getHostName();
 //                     // instanceTag = System.getenv("HOST_ID");
